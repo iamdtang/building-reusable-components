@@ -13,7 +13,8 @@ export default function App() {
       onClick={(newRating) => {
         setRating(newRating);
       }}
-      renderStar={(isFilled, onClick) => {
+    >
+      {(isFilled, onClick) => {
         return (
           <button type="button" className="btn btn-link" onClick={onClick}>
             <FontAwesomeIcon
@@ -24,6 +25,6 @@ export default function App() {
           </button>
         );
       }}
-    />
+    </StarRating>
   );
 }
