@@ -8,6 +8,9 @@ export default function App() {
   return (
     <StarRating
       rating={rating}
+      emptyColor="#aaa"
+      filledColor="green"
+      size="5x"
       onClick={(newRating) => {
         setRating(newRating);
       }}
