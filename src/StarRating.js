@@ -1,6 +1,7 @@
 export default function StarRating(props) {
-  const { rating, onClick, renderStar } = props;
+  const { rating, onClick } = props;
   const stars = [];
+  const renderStar = props.children;
 
   for (let i = 1; i <= 5; i++) {
     stars.push(
