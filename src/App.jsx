@@ -8,6 +8,8 @@ export default function App() {
   return (
     <div>
       <StarRating
+        emptyColor="#aaa"
+        filledColor="green"
         rating={rating}
         onStarClick={(i) => {
           setRating(i);
