@@ -18,7 +18,7 @@ export default function StarRating(props) {
         }}
       >
         {/* i <= props.rating ? filledColor : emptyColor */}
-        {props.renderStar(isFilled)}
+        {props.children(isFilled)}
       </button>
     );
   }
