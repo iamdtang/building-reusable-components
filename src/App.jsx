@@ -10,7 +10,7 @@ export default function App() {
   const filledColor = "yellow";
   const emptyColor = "gray";
 
-  // renderStar is a render prop to provide customization on what star is rendered
+  // children is a render prop to provide customization on what star is rendered
   return (
     <div>
       <StarRating
@@ -18,7 +18,8 @@ export default function App() {
         onStarClick={(i) => {
           setRating(i);
         }}
-        renderStar={(isFilled) => {
+      >
+        {(isFilled) => {
           // return isFilled ? "★" : "☆";
 
           return (
@@ -29,7 +30,17 @@ export default function App() {
             />
           );
         }}
-      />
+      </StarRating>
+      <StarRating
+        rating={rating}
+        onStarClick={(i) => {
+          setRating(i);
+        }}
+      >
+        {(isFilled) => {
+          return isFilled ? "★" : "☆";
+        }}
+      </StarRating>
     </div>
   );
 }
